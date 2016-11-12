@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Price Comparison</title>
+</head>
+<body>
+<form method="POST">
+	{% csrf_token %}
+	{{form.search_term}}
+	<button type="submit">Search</button>
+	{{ result }}
+	{{ flipkart_price }}
+	{{ snapdeal_price }}
+</form>
+</body>
+</html>
