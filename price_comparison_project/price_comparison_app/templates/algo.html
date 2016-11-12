@@ -3,13 +3,22 @@
 	<title>Price Comparison</title>
 </head>
 <body>
-<form method="POST">
-	{% csrf_token %}
-	{{form.search_term}}
-	<button type="submit">Search</button>
-	{{ result }}
-	{{ flipkart_price }}
-	{{ snapdeal_price }}
-</form>
+	<div class="heading" style="margin: 0 auto;">
+		<h2>Price Comparison Algo</h2>
+	</div>
+	<div class="form" style="margin: 0 auto;">
+	<form method="POST">
+		{% csrf_token %}
+		{{form.search_term}}
+		<button type="submit">Search</button>
+		<p>{{ result }}</p></br>
+		{% if flipkart_price %}
+			<p>Flipkart Price: {{ flipkart_price }}</p></br>
+		{% endif %}
+		{% if snapdeal_price %}
+			<p>Snapdeal Price: {{ snapdeal_price }}</p>
+		{% endif %}
+	</form>
+	</div>
 </body>
 </html>

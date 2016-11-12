@@ -15,7 +15,6 @@ def compare_algo(request):
 		if form.is_valid():
 			product_name = form.cleaned_data['search_term']
 			API_KEY = "8eFYvQ0mCr06A3YoUZV9XK7867AgLLDeLuBdhILm+3c"
-			product_name = input("Enter the Name of the Product:")
 
 			search_term = "buy " + product_name
 
